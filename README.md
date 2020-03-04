@@ -41,7 +41,6 @@ The easiest way of installing is to get it from Sipwise repository:
 ```bash
 echo 'deb http://deb.sipwise.com/spce/mr7.1.1/ stretch main' > /etc/apt/sources.list.d/sipwise.list
 echo 'deb-src http://deb.sipwise.com/spce/mr7.1.1/ stretch main' >> /etc/apt/sources.list.d/sipwise.list
-apt-get update
 apt-get install -y --allow-unauthenticated ngcp-keyring
 apt-get update
 apt-get install -y ngcp-rtpengine
