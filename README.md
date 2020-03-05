@@ -69,6 +69,7 @@ touch /etc/iptables/firewall6.conf
 ## Install Kamailio
 ```bash
 apt-get install kamailio kamailio-websocket-modules kamailio-mysql-modules kamailio-tls-modules kamailio-presence-modules mysql-server
+sudo mysql_secure_installation
 cd WEBRTC-to-SIP
 cp etc/kamailio/* /etc/kamailio/
 kamdbctl create
