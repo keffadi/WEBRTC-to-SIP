@@ -15,6 +15,7 @@ The configuration is setup to always bridge via RTPEngine. To change the behavio
 ## Get certificates
 For the certificates you need, a simple solution is Let's Encrypt certificates. They will work for both Kamailio TLS, Nginx TLS and TURN TLS. Run the following (you must stop services running on port 443 during certificate request/renewal):
 ```bash
+sudo su 
 apt-get install certbot
 certbot certonly --standalone -d YOUR-DOMAIN
 ```
@@ -87,6 +88,7 @@ This will install the client that can be found [here](https://github.com/havfo/S
 To be able to support running HTTP(S) and TURN on the same port (443), we need a newer version of nginx that supports streams the way we need. Get it from official repo:
 ```sh
 echo 'deb http://nginx.org/packages/mainline/debian/ stretch nginx' > /etc/apt/sources.list.d/nginx.list
+sudo su 
 curl -fsSL https://nginx.org/keys/nginx_signing.key | apt-key add -
 apt-get update
 apt-get install nginx
